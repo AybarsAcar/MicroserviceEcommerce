@@ -30,7 +30,7 @@ public class CatalogController : ControllerBase
   [HttpGet("{id:length(24)}", Name = "GetProduct")]
   [ProducesResponseType((int)HttpStatusCode.NotFound)]
   [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
-  public async Task<ActionResult<Product>> GetProductByIdAsync([FromQuery] string id)
+  public async Task<ActionResult<Product>> GetProductByIdAsync(string id)
   {
     var product = await _repository.GetProductAsync(id);
 
@@ -46,7 +46,7 @@ public class CatalogController : ControllerBase
   [Route("[action]/{category}", Name = "GetProductByCategory")]
   [HttpGet]
   [ProducesResponseType(typeof(IEnumerable<Product>), statusCode: (int)HttpStatusCode.OK)]
-  public async Task<ActionResult<IEnumerable<Product>>> GetProductByCategoryAsync([FromQuery] string category)
+  public async Task<ActionResult<IEnumerable<Product>>> GetProductByCategoryAsync(string category)
   {
     var products = await _repository.GetProductsByCategoryAsync(category);
     return Ok(products);
@@ -70,7 +70,7 @@ public class CatalogController : ControllerBase
 
   [HttpDelete("{id:length(24)}", Name = "DeleteProduct")]
   [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
-  public async Task<IActionResult> DeleteProductByIdAsync([FromQuery] string id)
+  public async Task<IActionResult> DeleteProductByIdAsync(string id)
   {
     return Ok(await _repository.DeleteProductByIdAsync(id));
   }
