@@ -26,7 +26,7 @@ public class BasketController : ControllerBase
 
     // when the user add their first item to their basket
     // we will create an empty basket with the user's username
-    return Ok(basket ?? new ShoppingCart());
+    return Ok(basket ?? new ShoppingCart(username));
   }
 
   [HttpPost]
