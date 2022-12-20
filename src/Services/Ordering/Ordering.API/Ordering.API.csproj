@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-Ordering.API-ABF9AEE2-D0E6-4189-A221-BE42C28166CC</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.6"/>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.6"/>
+        <PackageReference Include="Microsoft.Identity.Web" Version="1.16.0"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3"/>
+    </ItemGroup>
+
+</Project>
