@@ -1,8 +1,8 @@
-using System.Globalization;
 using AutoMapper;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using Ordering.Application.Contracts.Persistence;
+using Ordering.Application.Exceptions;
 using Ordering.Domain.Entities;
 
 namespace Ordering.Application.Features.Orders.Commands.UpdateOrder;
@@ -27,8 +27,7 @@ public class UpdateOrderCommandHandler : IRequestHandler<UpdateOrderCommand>
 
     if (orderToUpdate == null)
     {
-      // TODO: throw not found exception
-      // throw new NotFoundException(nameof(Order), request.Id);
+      throw new NotFoundException(nameof(Order), request.Id);
     }
 
     // update the orderToUpdate object with the values from the request object
