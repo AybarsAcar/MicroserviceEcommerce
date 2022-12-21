@@ -29,10 +29,12 @@ public interface IAsyncRepository<T> where T : EntityBase
   /// <param name="includeString"></param>
   /// <param name="disableTracking"></param>
   /// <returns></returns>
-  Task<IReadOnlyList<T>> GetAsync(Expression<Func<T, bool>> predicate = null,
+  Task<IReadOnlyList<T>> GetAsync(
+    Expression<Func<T, bool>> predicate = null,
     Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
     string includeString = null,
-    bool disableTracking = true);
+    bool disableTracking = true
+  );
 
   /// <summary>
   /// Pagination queries with configurations
@@ -42,10 +44,12 @@ public interface IAsyncRepository<T> where T : EntityBase
   /// <param name="includes">Predicate as a function format</param>
   /// <param name="disableTracking"></param>
   /// <returns></returns>
-  Task<IReadOnlyList<T>> GetAsync(Expression<Func<T, bool>> predicate = null,
+  Task<IReadOnlyList<T>> GetAsync(
+    Expression<Func<T, bool>> predicate = null,
     Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
     List<Expression<Func<T, object>>> includes = null,
-    bool disableTracking = true);
+    bool disableTracking = true
+  );
 
   /// <summary>
   /// Returns the entity by its id
