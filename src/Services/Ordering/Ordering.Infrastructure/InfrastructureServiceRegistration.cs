@@ -14,10 +14,12 @@ public static class InfrastructureServiceRegistration
 {
   public static void AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
   {
+    AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+    
     // SqlServer database related dependencies
     services.AddDbContext<OrderContext>(options =>
     {
-      options.UseSqlServer(configuration.GetConnectionString("OrderingConnectionString"));
+      options.UseNpgsql(configuration.GetConnectionString("OrderingConnectionString"));
     });
 
     services.AddScoped(typeof(IAsyncRepository<>), typeof(RepositoryBase<>));

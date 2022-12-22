@@ -4,7 +4,7 @@ namespace Discount.Grpc.Extensions;
 
 public static class ServicesExtensions
 {
-  public static WebApplication MigrateDatabase<T>(this WebApplication app, int? retry = 0)
+  public static void MigrateDatabase<T>(this WebApplication app, int? retry = 0)
   {
     var retryForAvailability = retry.Value;
 
@@ -53,7 +53,5 @@ public static class ServicesExtensions
         MigrateDatabase<T>(app, retryForAvailability);
       }
     }
-
-    return app;
   }
 }
