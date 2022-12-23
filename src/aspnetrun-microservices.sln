@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Application", "Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Infrastructure", "Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{754B6334-4685-475B-B1D0-5762F2FE67F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Messages", "BuildingBlocks\EventBus.Messages\EventBus.Messages.csproj", "{D8466A8E-F4F7-466D-8D80-A4A87D983350}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +62,9 @@ Global
 		{754B6334-4685-475B-B1D0-5762F2FE67F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{754B6334-4685-475B-B1D0-5762F2FE67F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{754B6334-4685-475B-B1D0-5762F2FE67F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8466A8E-F4F7-466D-8D80-A4A87D983350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8466A8E-F4F7-466D-8D80-A4A87D983350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8466A8E-F4F7-466D-8D80-A4A87D983350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8466A8E-F4F7-466D-8D80-A4A87D983350}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
