@@ -29,6 +29,12 @@ public class OrderController : ControllerBase
     return Ok(orders);
   }
 
+  /// <summary>
+  /// TODO: Remove this as this method is only for testing
+  /// this logic is handler in the BasketCheckoutConsumer
+  /// </summary>
+  /// <param name="command"></param>
+  /// <returns></returns>
   [HttpPost(Name = "CheckoutOrder")]
   [ProducesResponseType((int)HttpStatusCode.OK)]
   public async Task<ActionResult<int>> CheckoutOrder([FromBody] CheckoutOrderCommand command)
