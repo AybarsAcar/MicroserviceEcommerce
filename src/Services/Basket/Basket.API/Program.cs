@@ -12,6 +12,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// AutoMapper
+builder.Services.AddAutoMapper(typeof(Program));
+
 // Redis Connection
 builder.Services.AddStackExchangeRedisCache(options =>
 {
