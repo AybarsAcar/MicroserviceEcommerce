@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Messages", "Buildi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGateway", "ApiGateways\OcelotApiGateway\OcelotApiGateway.csproj", "{19530F20-1A49-44E6-8C3F-197FD73FF98E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Aggregator", "ApiGateways\Shopping.Aggregator\Shopping.Aggregator.csproj", "{ABDB5F88-A0A0-491D-A119-C86D825CBFEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,9 @@ Global
 		{19530F20-1A49-44E6-8C3F-197FD73FF98E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19530F20-1A49-44E6-8C3F-197FD73FF98E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19530F20-1A49-44E6-8C3F-197FD73FF98E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABDB5F88-A0A0-491D-A119-C86D825CBFEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABDB5F88-A0A0-491D-A119-C86D825CBFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABDB5F88-A0A0-491D-A119-C86D825CBFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABDB5F88-A0A0-491D-A119-C86D825CBFEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
